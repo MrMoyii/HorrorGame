@@ -19,6 +19,7 @@ public class Flashlight : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F) && battery > 0)
         {
+            GetComponent<AudioSource>().Play();
             luz.SetActive(!luz.activeSelf);
         }
     }
