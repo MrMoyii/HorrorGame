@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]private Transform camara;
+    [SerializeField]private GameManager gameManager;
 
-    // Update is called once per frame
+    private float distanceRaycast = 3.0f;
     void Update()
     {
-        
+        //para ver el Raycast
+        //Debug.DrawRay(camara.position, camara.forward * distanceRaycast, Color.red);
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            RaycastHit raycast;
+            if (Physics.Raycast(camara.position, camara.forward, out raycast, distanceRaycast))
+            {
+                if (raycast.collider.gameObject.CompareTag("Objective"))
+                {
+                    gameManager.objective++;
+                    //TODO Win
+                    Destroy(raycast.collider.gameObject);
+                }
+            }
+        }
     }
 }
