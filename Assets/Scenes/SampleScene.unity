@@ -239,6 +239,11 @@ Transform:
   m_Father: {fileID: 1841811540}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &516157021 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7350008891826811916, guid: dfc4ecf8af41fd44e8a6f50013342e86, type: 3}
+  m_PrefabInstance: {fileID: 7350008891405346212}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &522547342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -753,6 +758,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7409482975098006510, guid: d0d8e3d41f5016140a961da7ee3d89a8, type: 3}
   m_PrefabInstance: {fileID: 7409482975948118771}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1622725908 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7409482975098006487, guid: d0d8e3d41f5016140a961da7ee3d89a8, type: 3}
+  m_PrefabInstance: {fileID: 7409482975948118771}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622725907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1030166549c750047bd2e7bf8c7c3ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!143 &1622725909 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 7409482975098006480, guid: d0d8e3d41f5016140a961da7ee3d89a8, type: 3}
+  m_PrefabInstance: {fileID: 7409482975948118771}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1622725914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -766,7 +787,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camara: {fileID: 963194228}
+  flashLight: {fileID: 516157021}
   gameManager: {fileID: 1581872545}
+  cc: {fileID: 1622725909}
+  energy: 7
+  fPSController: {fileID: 1622725908}
 --- !u!1 &1637555894 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6426756332044623032, guid: cc6c18675eb95d649bb9a9709648e56f, type: 3}
@@ -1675,6 +1700,10 @@ PrefabInstance:
     - target: {fileID: 7409482975098006510, guid: d0d8e3d41f5016140a961da7ee3d89a8, type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409482975098006510, guid: d0d8e3d41f5016140a961da7ee3d89a8, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7409482975564806018, guid: d0d8e3d41f5016140a961da7ee3d89a8, type: 3}
       propertyPath: m_Layer
