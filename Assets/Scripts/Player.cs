@@ -8,11 +8,13 @@ public class Player : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private CharacterController cc;
     [SerializeField] private float energy = 10, maxEnergy = 10, timeToRecover = 5;
+    [SerializeField] private float life = 10;
     [SerializeField] private FPSController fPSController;
 
     private float distanceRaycast = 3.5f;
     void Update()
     {
+        #region Recolectar objetos
         //para ver el Raycast
         //Debug.DrawRay(camara.position, camara.forward * distanceRaycast, Color.red);
         if (Input.GetKeyDown(KeyCode.E))
@@ -28,8 +30,8 @@ public class Player : MonoBehaviour
                 }
             }
         }
-
-        //sistema de energia y baja la linterna al correr
+        #endregion
+        # region Sistema de energia y baja la linterna al correr
         if (Input.GetKey(KeyCode.LeftShift) && cc.velocity.magnitude >= 1 && energy >= 0)
         {
             flashLight.localEulerAngles = Vector3.Lerp(flashLight.localEulerAngles, new Vector3(25, 0, 0), Time.deltaTime * 2.5f);
@@ -50,14 +52,26 @@ public class Player : MonoBehaviour
 
             if (energy >= 0)
             {
-                fPSController.walkSpeed = 6;
-                fPSController.runSpeed = 10;
+                fPSController.walkSpeed = 11.8f;
+                fPSController.runSpeed = 18.8f;
             }
 
             if (energy <= Mathf.Abs(maxEnergy))
                 energy += Time.deltaTime;
         }
-
-        
+        #endregion
     }
+
+    #region Métodos
+    public void TakeDamage(float damage)
+    {
+        life -= damage * Time.deltaTime;
+    }
+    public void Dead()
+    {
+        Debug.Log("Matar");
+        Destroy(gameObject);
+        Debug.Log("Morido");
+    }
+    #endregion
 }
