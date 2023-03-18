@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private Transform camara, flashLight;
+    [SerializeField] private GameObject enemy;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private CharacterController cc;
     [SerializeField] private float energy = 10, maxEnergy = 10, timeToRecover = 5;
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
                     if (gameManager.objective == gameManager.objectiveAmount)
                     {
                         Debug.Log("Ganaste!");
+                        enemy.SetActive(false);
                     }
                     Destroy(raycast.collider.gameObject);
                 }
