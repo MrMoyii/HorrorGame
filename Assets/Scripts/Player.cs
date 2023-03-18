@@ -25,7 +25,10 @@ public class Player : MonoBehaviour
                 if (raycast.collider.gameObject.CompareTag("Objective"))
                 {
                     gameManager.objective++;
-                    //TODO Win
+                    if (gameManager.objectiveAmount == 5)
+                    {
+                        Debug.Log("Ganaste!");
+                    }
                     Destroy(raycast.collider.gameObject);
                 }
             }
@@ -65,7 +68,12 @@ public class Player : MonoBehaviour
     #region Métodos
     public void TakeDamage(float damage)
     {
-        life -= damage * Time.deltaTime;
+        life -= damage;
+        if (life <= 0)
+        {
+            gameObject.SetActive(false);
+            Debug.Log("Perdiste!");
+        }
     }
     public void Dead()
     {

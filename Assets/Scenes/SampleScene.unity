@@ -580,10 +580,14 @@ PrefabInstance:
     - target: {fileID: 80305593673106347, guid: f5b080831dbf2f84d86bd7838d4b9804, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 73689ea1c741848499121490035dc879, type: 2}
+      objectReference: {fileID: 2100000, guid: 4768a7136deb5394daba2f2da68f2dd0, type: 2}
     - target: {fileID: 80305594934166820, guid: f5b080831dbf2f84d86bd7838d4b9804, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 80305594934166820, guid: f5b080831dbf2f84d86bd7838d4b9804, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 80305594934166820, guid: f5b080831dbf2f84d86bd7838d4b9804, type: 3}
       propertyPath: m_LocalPosition.x
@@ -807,6 +811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objective: 0
+  objectiveAmount: 5
 --- !u!4 &1581872546
 Transform:
   m_ObjectHideFlags: 0

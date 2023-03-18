@@ -15,13 +15,12 @@ public class AI_Enemy : MonoBehaviour
         IA.speed = velocidad;
         IA.SetDestination(Objetivo.position);
     }
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("te toque");
             Player player = FindObjectOfType<Player>();
-            player.TakeDamage(damage);
+            player.TakeDamage(Mathf.Abs(damage * Time.deltaTime));
         }
     }
 }
