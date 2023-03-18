@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
                 if (raycast.collider.gameObject.CompareTag("Objective"))
                 {
                     gameManager.objective++;
-                    if (gameManager.objectiveAmount == 5)
+                    if (gameManager.objective == gameManager.objectiveAmount)
                     {
                         Debug.Log("Ganaste!");
                     }

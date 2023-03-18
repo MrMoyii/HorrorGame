@@ -812,6 +812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objective: 0
   objectiveAmount: 5
+  objetivos: {fileID: 489942572}
 --- !u!4 &1581872546
 Transform:
   m_ObjectHideFlags: 0
