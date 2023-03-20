@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1571312862354028366, guid: fcd0267a33448d44180d6b0da4dec94f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e7b5a28f2f5a9c44d8e7171566553bdb, type: 3}
+    - target: {fileID: 1571312862354028366, guid: fcd0267a33448d44180d6b0da4dec94f, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4641517199171617141, guid: fcd0267a33448d44180d6b0da4dec94f, type: 3}
       propertyPath: m_Name
       value: Battery
@@ -179,11 +187,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5523826145565391906, guid: fcd0267a33448d44180d6b0da4dec94f, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 48396001}
+    - target: {fileID: 5523826145565391906, guid: fcd0267a33448d44180d6b0da4dec94f, type: 3}
       propertyPath: linterna
       value: 
       objectReference: {fileID: 1986425561}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcd0267a33448d44180d6b0da4dec94f, type: 3}
+--- !u!82 &48396001 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1571312862354028366, guid: fcd0267a33448d44180d6b0da4dec94f, type: 3}
+  m_PrefabInstance: {fileID: 48396000}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &51576462
 GameObject:
   m_ObjectHideFlags: 0
