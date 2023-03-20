@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4127713075994355513}
   - component: {fileID: 5949842454846807558}
   m_Layer: 0
-  m_Name: PickupPrototype01x01x01
+  m_Name: Coin
   m_TagString: Objective
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
