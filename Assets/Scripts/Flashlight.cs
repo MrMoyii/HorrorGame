@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Flashlight : MonoBehaviour
 {
     public float battery = 20.0f;
     public GameObject luz;
+    public Text txtBattery;
 
     void Update()
     {
+        txtBattery.text = "Baterry: " + battery.ToString("0");
+
         if (luz.activeSelf)
         {
             battery -= Time.deltaTime;

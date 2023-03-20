@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -8,13 +9,16 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject enemy;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private CharacterController cc;
-    [SerializeField] private float energy = 10, maxEnergy = 10, timeToRecover = 5;
-    [SerializeField] private float life = 10;
+    [SerializeField] public float energy = 10, maxEnergy = 10, timeToRecover = 5;
+    [SerializeField] public float life = 10;
     [SerializeField] private FPSController fPSController;
+    public Text txtLife;
 
     private float distanceRaycast = 3.5f;
     void Update()
     {
+        txtLife.text = "Life: " + life.ToString("0") + "\nEnergy: " + energy.ToString("0");
+
         #region Recolectar objetos
         //para ver el Raycast
         //Debug.DrawRay(camara.position, camara.forward * distanceRaycast, Color.red);
