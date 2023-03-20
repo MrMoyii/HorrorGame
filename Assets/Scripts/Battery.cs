@@ -5,13 +5,13 @@ using UnityEngine;
 public class Battery : MonoBehaviour
 {
     public Flashlight linterna;
-    public AudioSource clip;
+    public AudioSource aSource;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.transform.CompareTag("Player"))
         {
-            clip.Play();
+            aSource.Play();
             linterna.battery += 7.0f;
             Destroy(gameObject);
         }
