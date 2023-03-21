@@ -1547,7 +1547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objective: 0
   objectiveAmount: 0
-  objetivos: {fileID: 489942572}
+  objetivos: {fileID: 551445283}
   txtObjectives: {fileID: 1785562841}
 --- !u!4 &1581872546
 Transform:
