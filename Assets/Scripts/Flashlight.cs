@@ -11,7 +11,7 @@ public class Flashlight : MonoBehaviour
 
     void Update()
     {
-        txtBattery.text = "Baterry: " + battery.ToString("0");
+        //txtBattery.text = "Baterry: " + battery.ToString("0");
 
         if (luz.activeSelf)
         {

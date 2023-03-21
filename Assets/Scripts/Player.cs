@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     private float distanceRaycast = 3.5f;
     void Update()
     {
-        txtLife.text = "Life: " + life.ToString("0") + "\nEnergy: " + energy.ToString("0");
+        //txtLife.text = "Life: " + life.ToString("0") + "\nEnergy: " + energy.ToString("0");
 
         #region Recolectar objetos
         //para ver el Raycast
